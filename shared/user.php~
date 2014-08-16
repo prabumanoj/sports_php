@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.signin
+	{
+		position:absolute;
+		top:4px;
+		left:400px;
+	}
+.register{
+width:400px;
+}
+</style>	
+</head>	
+<body>
+
+
+<?php	
+$err = $err3 = $info = "";
+	if(isset($_POST['submt'])){
+	echo "here";
+		
+		$fullname = $_POST['name'];
+		$email = $_POST['email'];
+		$userid = $_POST['userid'];
+		$password = $_POST['password'];	
+		
+			if($fullname !== "" && $email !== "" && $userid !== "" && $password !== ""){						
+				if (!preg_match('/[^A-Za-z]/', $fullname)){
+				$conn = mysqli_connect("localhost","root","");
+				mysqli_select_db($conn,"login");
+				$data = "INSERT INTO users (fullname,email,userid,password) 
+				VALUES ('$fullname','$email','$userid','$password')";
+				mysqli_query($conn,$data);
+				mysqli_close($conn);
+				$info = "You are registered successfully";
+				}
+				else{
+				$err3 = "NAME should not contain numeric values";
+				}
+			}
+			else{
+				$err = "ENTER all the DATA";
+			}
+	}
+$err1 = $err2 = "";
+	if(isset($_POST['login'])){
+		session_start();
+		$myusername = $_POST['userid1'];
+		$mypassword = $_POST['password1'];
+			if($myusername !== "" && $mypassword !== ""){
+				$connect = mysqli_connect("localhost","root","");
+				mysqli_select_db($connect,"login");
+				$search = "SELECT*FROM users WHERE userid = '$myusername' and password = '$mypassword'";
+				$result = mysqli_query($connect,$search);
+				$check = mysqli_num_rows($result);
+					if($check == 1){	
+						session_regenerate_id();
+						$_SESSION['user_id'] = $myusername;
+						$_SESSION['password'] = $mypassword;
+						session_write_close();
+						header("location:article.php");
+					}
+					else{
+						$err1 = "ENTER VALID DATA";
+					}
+				mysqli_close($connect);
+			}
+			else{
+				$err2 = "USER-ID or PASSWORD is missing";
+			}
+		
+	}
+?>			
+<div class="register">
+	<form action="user.php" method="post">
+
+		<h3>REGISTER</h3>
+		<table>
+		<tr>
+		<td>FULL NAME:</td> 
+		<td><input type="text" name="name" ></td>
+		</tr>
+		<tr>
+		<td>EMAIL:</td> 
+		<td><input type="text" name="email" ></td>
+		</tr>
+		<tr>
+		<td>USER-ID:</td>
+		<td><input type="text" name="userid" ></td>
+		</tr>
+		<tr>
+		<td>PASSWORD:</td>
+		<td><input type="password" name="password" </td>
+		</tr>
+		</table>
+		<br>
+		<input  type="submit" name = "submt" value = "SUBMIT">
+		<br>
+		<?php
+		echo $info;
+		echo $err;
+		echo $err3;
+		?>	
+
+	</form>
+</div>
+
+<div class="signin">
+	<form action="user.php" method="post">
+
+		<h3>SIGN-IN</h3>
+		<table>
+		<tr>
+		<td>USER-ID:</td> 
+		<td><input type="text" name="userid1" ></td>
+		</tr>
+		<tr>
+		<td>PASSWORD:</td> 
+		<td><input type="password" name="password1" ></td>
+		</tr>
+		</table>
+		<br>
+		<input  type="submit" name = "login" value = "LOGIN">
+		<br>
+		<?php
+		echo $err1;
+		echo $err2;
+		?>
+
+	</form>
+</div>
+</body>
+</html>

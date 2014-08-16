@@ -1,0 +1,31 @@
+body{
+
+}
+
+.form-group{
+margin:50px;
+}
+
+.heading{
+margin:30px;
+}
+
+.bts{
+margin:5px;
+float:left;
+}
+
+.success{
+margin-left:50px;
+border-radius:5px;
+padding:5px;
+vertical-align:center;
+color:green;
+border:1px solid green;
+}
+
+.register, .signin{
+float:left;
+margin:20px;
+width:45% !important;
+}

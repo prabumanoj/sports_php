@@ -1,0 +1,29 @@
+<?php 
+if(isset($_GET['submit'])){
+if($_GET['sport'] != ""){
+	if($_GET['name']!= "" && $_GET['age']!= "" && $_GET['weight']!= "" && $_GET['height']!= ""){
+	$name=$_GET['name'];
+	$age=$_GET['age'];
+	$weight=$_GET['weight'];
+	$height=$_GET['height'];
+	$ach=$_GET['ach'];
+	$sport=$_GET['sport'];
+	
+	include 'db.php';
+	
+	$insert="INSERT INTO players_infor (name, age, weight, height, ach, sport)
+		VALUES ('$name','$age','$weight','$height','$ach','$sport')"; 
+	
+
+			if (!mysqli_query($con,$insert)) {
+  die('Error: ' . mysqli_error($con));
+}
+		
+		
+	}
+	else{
+	}
+}
+	else{}
+	}
+?>

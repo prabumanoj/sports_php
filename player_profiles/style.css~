@@ -1,0 +1,103 @@
+body,html{
+			font-family: 'Open Sans', sans-serif;
+			height:100%;
+			}
+			div[class^="item"]{
+			color:white;
+			width:200px;
+			height:320px;
+			margin:10px 0px 10px 10px;
+						margin-top:20px;
+			float:left;
+			position:relative;
+background: #ffc413; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ffc413 0%, #a47800 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffc413), color-stop(100%,#a47800)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #ffc413 0%,#a47800 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #ffc413 0%,#a47800 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #ffc413 0%,#a47800 100%); /* IE10+ */
+background: linear-gradient(135deg, #ffc413 0%,#a47800 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc413', endColorstr='#a47800',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+box-shadow: 3px 3px 1px rgb(50,50,50);
+			}
+			
+						div[class^="item"]:hover{
+						    -ms-transform: scale(1.05,1.05); /* IE 9 */
+    -webkit-transform: scale(1.05,1.05); /* Chrome, Safari, Opera */
+    transform: scale(1.05,1.05);
+    z-index:99;
+			}
+			
+
+			
+			.player_pic{
+			width:115px;
+			height:115px;
+			background-color:white;
+float:right;
+margin-right:10px;
+margin-top:30px;
+margin-bottom:-30px;
+			}
+			
+			.insti_pic{
+			width:45px;
+			height:45px;
+
+			margin-left:10px;
+			float:left;
+			margin-top:15px;
+			}
+			.player_name{
+			text-align:right;
+			padding-right:10px;
+			padding-top:5px;
+			background-color:black;
+						}
+						
+			.info_box td{
+			border-top:1px solid black;
+			width:90%;
+			padding:5px;
+			}
+			
+			.info_box tr{
+background: #ffc413; /* Old browsers */
+background: -moz-linear-gradient(top, #ffc413 0%, #a47800 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc413), color-stop(100%,#a47800)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffc413 0%,#a47800 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffc413 0%,#a47800 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffc413 0%,#a47800 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffc413 0%,#a47800 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc413', endColorstr='#a47800',GradientType=0 ); /* IE6-9 */
+box-shadow: 1px 1px 1px rgb(50,50,50);
+			}
+			.info_box{
+			height:50%;
+
+			}
+			.info_box table{
+			padding:15px 7px 3px 7px;
+			float:left;
+			border-collapse:collapse;
+			font-size:1.1rem;
+						margin-top:30%;
+			}
+			
+			.player_pos{
+						padding:5px;
+						background-color:black;
+			float:left;
+			padding-left:10px;
+			padding-right:10px;}
+			
+			.sport_info{
+			float:left;
+			}
+			
+						.player_info{
+			float:right;
+			position:relative;
+width:70%;
+			}
+			

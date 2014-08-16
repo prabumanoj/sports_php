@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			.sport_info{
+			width:50%;
+			float:left;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class='sport_info'>
+			<div class='sport_title'>
+				<h2>Hockey</h2>
+			</div>
+
+			<div class='sport_info'>
+				<p>Well, it is very bad time to be a hockey enthusiast in a country which has forgotten its past glory. From the legendary Dhyan Chand to the inspirational Dhanraj Pillay, Indian hockey players used to delight hockey connoisseurs around the world. After the recent performance of India in the world cup, our future prospects also do not look too bright. </p>
+		<p>
+
+		But here in IIT Madras we do try to make a difference. The legacy of this forgotten sport still continues here. With a group of highly enthusiastic students, the hockey scene of IIT Madras has always rocked. With its lush green field, IIT Madras has one of the best facilities for hockey as compared to any other college in India. Hockey is also offered as an NSO option for freshers. Under the able guidance of our coach, freshers have an excellent opportunity to grasp the basics of hockey.</p>
+			</div>
+		</div>
+	</body>
+</html>
